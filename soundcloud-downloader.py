@@ -104,7 +104,7 @@ if __name__ == "__main__":
 	tags = bool(args.id3tags)
 	
 	download = SoundCloudDownload(args.SOUND_URL, verbose, tags)
-	download.downloadSong()
+	download.downloadSongs()
 	
 	
 
