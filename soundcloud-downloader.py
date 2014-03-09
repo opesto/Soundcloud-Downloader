@@ -42,15 +42,14 @@ class SoundCloudDownload:
                         streamList.append("http://media.soundcloud.com/stream/{0}".format(stream_id))
                 return streamList
 
-	def addID3(self, i):
-                curTitle = self.titleList[i]
+	def addID3(self, title):
 		try:
-			id3info = ID3("{0}.mp3".format(curTitle))
+			id3info = ID3("{0}.mp3".format(title))
 			# Slicing is to get the whole track name
 			# because SoundCloud titles are usually longer
 			# than the ID3 spec of 30 characters
-			id3info['TITLE'] = curTitle[:30] # first 30 chars
-			id3info['ARTIST'] = curTitle[30:] # rest of the chars
+			id3info['TITLE'] = title[:30] # first 30 chars
+			id3info['ARTIST'] = title[30:] # rest of the chars
 			print "\nID3 tags added"
 		except InvalidTagError, err:
 			print "\nInvalid ID3 tag: {0}".format(err)
@@ -61,14 +60,13 @@ class SoundCloudDownload:
                 shutil.move(src, dst)
 	
 	def downloadSong(self):
-                i = 0
                 for title, streamURL in zip(self.titleList, self.streamURLlist):
                         filename = "{0}.mp3".format(title)
                         sys.stdout.write("\nDownloading: {0}\n".format(filename))
                         try:
                                 filename, headers = urllib.urlretrieve(url=streamURL, filename=filename, reporthook=self.report)
-                                self.addID3(i)
-                                self.addToItunes(self.titleList[i])
+                                self.addID3(title)
+                                self.addToItunes(title)
                         except:
                                 print "ERROR: Author has not set song to streamable, so it cannot be downloaded"
 	
