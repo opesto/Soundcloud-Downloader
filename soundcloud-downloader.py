@@ -59,7 +59,7 @@ class SoundCloudDownload:
                 dst = os.getcwd().replace("\Soundcloud-Downloader",self.itunes_path)
                 shutil.move(src, dst)
 	
-	def downloadSong(self):
+	def downloadSongs(self):
                 for title, streamURL in zip(self.titleList, self.streamURLlist):
                         filename = "{0}.mp3".format(title)
                         sys.stdout.write("\nDownloading: {0}\n".format(filename))
