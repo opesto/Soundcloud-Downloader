@@ -25,13 +25,13 @@ git clone https://github.com/RossHamish/Soundcloud-Downloader
 ```
 Your directory structure should look like this:
 .
-+-- Music
-|   +-- iTunes
-|       +-- iTunes Media
-|           +-- Automatically Add to iTunes
-|   +-- Soundcloud-Downloader
-|       +-- soundcloud-downloader.py
-|       +-- soundcloud-downloader-GUI.py
++-- Music  
+|   +-- iTunes  
+|       +-- iTunes Media  
+|           +-- Automatically Add to iTunes  
+|   +-- Soundcloud-Downloader  
+|       +-- soundcloud-downloader.py  
+|       +-- soundcloud-downloader-GUI.py  
 
 Now:
 ```
