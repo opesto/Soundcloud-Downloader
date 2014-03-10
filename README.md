@@ -23,8 +23,9 @@ Open a terminal/command prompt in the directory which contains your Music direct
 ```
 git clone https://github.com/RossHamish/Soundcloud-Downloader
 ```
-Your directory structure should look like this:
-.
+Your directory structure should look like this:  
+```
+.  
 +-- Music  
 |   +-- iTunes  
 |       +-- iTunes Media  
@@ -32,7 +33,7 @@ Your directory structure should look like this:
 |   +-- Soundcloud-Downloader  
 |       +-- soundcloud-downloader.py  
 |       +-- soundcloud-downloader-GUI.py  
-
+```
 Now:
 ```
 cd Soundcloud-Downloader
