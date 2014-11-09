@@ -1,7 +1,8 @@
-SoundCloud downloader  
-- mac instructions
+SoundCloud downloader - mac instructions
 
-Follow these steps exactly:
+Follow these steps exactly.
+
+#### Setup
 
 1. [Download](http://git-scm.com/download/mac) and [install](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac) git
 
@@ -103,13 +104,13 @@ Follow these steps exactly:
 
 8. Save the file, and quit TextEdit.
 
-Congratulations! You’re done all the hard one-time-only stuff! 
+Congratulations! You’re done all the hard stuff! 
 
-From now on you'll only need the steps in "Regular workflow".
+From now on only the [regular workflow](#regular-workflow) steps are necessary.
 
 ------
 
-Regular workflow:
+#### Regular workflow
 
 1. Open a web browser: Safari, [Firefox], or [Chrome]
     * Go to soundcloud
