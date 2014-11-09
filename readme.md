@@ -146,7 +146,7 @@ Cool
 
 This script is for academic use only. If abuse is reported, this repository will be removed.
 
-To learn more, or to get help, contact [ross](https://github.com/rosshamish/)
+To learn more, or to get help, contact [ross](https://github.com/rosshamish/) or [olive](https://github.com/opresto)
 
 [Learn more about git]
 
