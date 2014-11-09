@@ -1,39 +1,136 @@
-SoundCloud downloader for MACS
+SoundCloud downloader - mac instructions
 
 Follow these steps exactly:
 
-1) Download Git  : http://git-scm.com/download/mac
-2) Download Python : https://www.python.org/downloads/release/python-342/
-3) Go to Finder, then go to Applications. Look for Utilities, open Terminal which is inside Utilities.
-4) Once inside Terminal, you need to check to see if both python and git were downloaded.  Type : Git --version
-git version 1.9.3 should be printed to the screen (or which ever version you have).
-Then, check if Python was downloaded.  Type : Python --version
-Python version 2.7.5 should be printed to the screen (or which ever version you have).
-5) If both Python and Git’s versions were printed to the screen. Now, choose a destination for all your downloaded songs to go to.  I for example went to Music inside Finder, and made a folder called Soundcloud.
-6) Now go back inside Terminal. Type: mkdir python-soundcloud-dl (nothing should happen)
-7) Type: cd python-soundcloud-dl
-8) Type: git clone https://github.com/sachinrudr/Soundcloud-Downloader
-9) Type: cd Soundcloud-Downloader
-10)  Type: sudo easy_install pip
-11) Type: sudo pip install mutagen
-12) Type: sudo pip install requests
-13)  Type: emacs soundcloud-downloader.py (some programming code should pop up)
-14)  Now you have to figure out the path with which you want to save your music to. I have my music downloaded to a folder called Soundcloud in Music, in Finder.
-So my path is “/Users/<your name here>/Music/Soundcloud”. If you are still not sure what the path is, right click on the folder you are downloading your music to and click the “get info” option. A small window should pop up and right next to “where”, it should say the path of where the folder is. For me it would say /Users/Oliver/Music. Add /<name of folder> to the end of it, to make the path /Users/Olivier/Music/Soundcloud. This is the path you will use in the next step.
-15)  In the code, in terminal (about 15 lines down)
-replace this line:
-DIRECTORY = raw_input("Where do you want to put the files?\ndefault is '/media/Data/Music/Untagged': ") or '/media/Data/Music/Untagged'
+1. **[Download](http://git-scm.com/download/mac)** and **[install](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac)** git
+    - [learn more about git](http://cswsolutions.com/featured-post/git-for-non-developers/)
 
-with this line:
+* [Download python](https://www.python.org/downloads/release/python-342/)
 
-DIRECTORY = “<name of the path from step 14)>”
-So I would have replaced it with: 
-DIRECTORY = "/Users/Olivier/Music/Soundcloud”
-16) Now save and exit back to the terminal by typing control x, control c.
-17) Congratulations you’re done all the hard stuff! Now find the url to the soundcloud song you want to download. You can even download all your likes on soundcloud. Just simply click on your likes page on soundcloud and use the url to that page. The url should look like this: https://soundcloud.com/name/likes 
-18) To download a song or all your likes type : 
-python soundcloud-downloader.py <the url from step 17 here>
-so for example type, 
-python soundcloud-downloader.py https://soundcloud.com/willowbeats/willow-beats-triple-j-mix-up-exclusive
-19)  Every time you download something you have to be in the 
-Soundcloud-Downloader directory. If you are reopening the terminal to download something new, re do steps 7 and 9. And then redo step 18 with the new url you want to download.
+* Open Terminal
+    * How-to: Open Finder. Click on `Applications`, then `Utilities`. 
+    * Important: when in the Terminal, type *exactly* what is shown
+
+    $ like this
+
+    and hit Enter on your keyboard after each line. For each command, expected output is shown
+
+    like this
+
+    (and comments look like this)
+
+* Verify that python and git were installed correctly.
+
+    $ git --version
+    git version #.#.#
+
+    (Where # is some number)
+    (Do not type the $)
+
+    $ python --version
+    python version 2.#.#
+
+    (Where # is some number)
+    (Do not type the $)
+
+* Open Finder. Pick a folder to keep downloaded songs in, or create a new one. A good option is “/Users/<your-name>/Music/Soundcloud”. Keep Finder open.
+
+* Open Terminal.
+
+    $ mkdir python-soundcloud-dl
+    $ cd python-soundcloud-dl
+    $ git clone https://github.com/rosshamish/soundcloud-downloader
+    Cloning into 'soundcloud-downloader'...
+    remote: Counting objects: 130, done.
+    remote: Compressing objects: 100% (87/87), done.
+    remote: Total 130 (delta 43), reused 130 (delta 43)
+    Receiving objects: 100% (130/130), 28.27 KiB | 0 bytes/s, done.
+    Resolving deltas: 100% (43/43), done.
+    Checking connectivity... done.
+
+    (Or similar)
+
+    $ cd soundcloud-downloader
+
+    $ sudo easy_install pip
+    [sudo] password for <your-name>: 
+
+    (type your password, then hit Enter on the keyboard)
+    (no letters will appear - that is normal)
+
+    Searching for pip
+    Best match: pip #.#.#
+    Adding pip 1.5.4 to easy-install.pth file
+    Installing pip script to /some/path
+    Installing pip2.7 script to /some/path
+    Installing pip2 script to /some/path
+
+    Using /some/path/
+    Processing dependencies for pip
+    Finished processing dependencies for pip
+
+    $ sudo pip install mutagen
+
+    Downloading/unpacking mutagen
+      Downloading mutagen-#.#.#.tar.gz (850kB): 850kB downloaded
+      Running setup.py (path:/some/path/to/setup.py) egg_info for package mutagen
+        
+    Installing collected packages: mutagen
+      Running setup.py install for mutagen
+        changing mode of build/scripts-#.#/mid3cp from 664 to 775
+        ...
+
+    Successfully installed mutagen
+    Cleaning up...
+
+    $ sudo pip install requests
+
+    Downloading/unpacking requests
+      Downloading requests-#.#.#-py2.py3-none-any.whl (459kB): 459kB downloaded
+    Installing collected packages: requests
+    Successfully installed requests
+    Cleaning up...
+
+    $ open -t soundcloud-downloader.py
+
+    (Code will open in a text editor window)
+
+* In the code, replace `<your-name>` on this line with your actual name
+
+    destination_folder = '/Users/<your-name>/Music/Soundcloud'
+
+    (This should be the same path as in step 5)
+
+* Save the file, and quit TextEdit.
+
+Congratulations! You’re done all the hard stuff! From now on you'll only need to do the steps in "Regular workflow":
+
+------
+
+Regular workflow:
+
+1. Open a web browser: Safari, [Firefox], or [Chrome]
+    1. Go to soundcloud
+        * How-to: Type `http://soundcloud.com` in the [address bar](http://www.basicsbee.com/lesson3.html)
+    * Go to the page of a song or set which you own the rights to
+    * Copy the page's address
+        * How-to: click and drag to select the whole address with your mouse. 
+            * Right click on the text, and select "copy" **or** hold 'Cmd' and press 'C'
+        * It should look like one of:
+            * https://soundcloud.com/<user>/<track-name>
+            * https://soundcloud.com/<user>/sets/<set-name>
+            * https://soundcloud.com/<user>/likes 
+
+* Open Terminal.
+    * Refer to setup step #3 if you've forgotten how
+
+    $ cd
+    $ cd python-soundcloud-downloader
+    $ cd soundcloud-downloader
+    $ python soundcloud-downloader.py <page-address>
+
+    (To get the page-address you copied in the previous step:)
+    (Right click, then click 'paste')
+
+[Firefox]: https://www.mozilla.org/en-US/firefox/new/
+[Chrome]: http://www.google.ca/chrome/

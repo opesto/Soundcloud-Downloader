@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # March 8, 2014
-import urllib, urllib2
+import urllib
 import sys
 import argparse
 import re
@@ -13,14 +13,12 @@ import os
 from mutagen.easyid3 import EasyID3
 
 # Change the line right after this one
-destination_folder = '/Users/<your-name>/Music/Soundcloud'
+DIRECTORY = '/Users/<your-name>/Music/Soundcloud'
 
-while True:
-    DIRECTORY = raw_input('Save in {}/'.format(destination_folder)) or destination_folder
-    if os.path.exists(DIRECTORY):
-        break;
-    else:
-        print 'That path does not exist.'
+DIRECTORY += '/' + raw_input('Destination: {}/'.format(
+    DIRECTORY))
+if not os.path.exists(DIRECTORY):
+    os.makedirs(DIRECTORY)
 
 class SoundCloudDownload:
     def __init__(self, url, verbose, tags):
@@ -57,10 +55,10 @@ class SoundCloudDownload:
         except:
             try:
                 tracks = r.json()['tracks']
-                # If this isn't a playlist, just make a list of
-                # a single element (the track)
+            # If this isn't a playlist, just make a list of
+            # a single element (the track)
             except:
-            tracks = [r.json()]
+                tracks = [r.json()]
         for track in tracks:
             waveform_url = track['waveform_url']
             self.titleList.append(self.getTitleFilename(track['title']))
