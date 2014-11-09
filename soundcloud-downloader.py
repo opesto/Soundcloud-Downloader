@@ -12,8 +12,10 @@ import os
 
 from mutagen.easyid3 import EasyID3
 
+destination_folder = '/media/Data/Music/Untagged'
+
 while True:
-   DIRECTORY = raw_input("Where do you want to put the files?\ndefault is '/media/Data/Music/Untagged': ") or '/media/Data/Music/Untagged'
+     DIRECTORY = raw_input('Save in {}/'.format(destination_folder)) or destination_folder
    if os.path.exists(DIRECTORY):
       break;
    else:
