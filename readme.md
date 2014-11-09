@@ -108,8 +108,6 @@ Congratulations! You’re done all the hard stuff!
 
 From now on only the [regular workflow](#regular-workflow) steps are necessary.
 
-------
-
 #### Regular workflow
 
 1. Open a web browser: Safari, [Firefox], or [Chrome]
@@ -150,15 +148,12 @@ This script is for academic use only. If abuse is reported, this repository will
 
 To learn more, or to get help, contact [ross](https://github.com/rosshamish/)
 
-[Learn more about python]  
-[Learn more about git]  
-[Learn more about github]  
+[Learn more about git]
 
-------
+[Learn more about python]
 
 [Firefox]: https://www.mozilla.org/en-US/firefox/new/
 [Chrome]: http://www.google.ca/chrome/
 
 [Learn more about python]: http://docs.activestate.com/activepython/2.7/easytut/index.html
 [Learn more about git]: http://cswsolutions.com/featured-post/git-for-non-developers/
-[Learn more about github]: http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1
