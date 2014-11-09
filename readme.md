@@ -34,7 +34,7 @@ Follow these steps exactly.
         (Where # is some number)
         (Do not type the $)
 
-5. Open Finder. Pick a folder to keep downloaded songs in, or create a new one. A good option is “/Users/<your-name>/Music/Soundcloud”. Keep Finder open.
+5. Open Finder. Pick a folder to keep downloaded songs in, or create a new one. A good option is `"/Users/<your-name>/Music/Soundcloud”`. Keep Finder open.
 
 6. Open Terminal.
 
