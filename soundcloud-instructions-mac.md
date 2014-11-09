@@ -1,9 +1,9 @@
-SoundCloud downloader - mac instructions
+SoundCloud downloader  
+- mac instructions
 
 Follow these steps exactly:
 
 1. **[Download](http://git-scm.com/download/mac)** and **[install](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac)** git
-    - [learn more about git](http://cswsolutions.com/featured-post/git-for-non-developers/)
 
 * [Download python](https://www.python.org/downloads/release/python-342/)
 
@@ -145,6 +145,14 @@ Regular workflow:
     * Inside the folder will be each track downloaded
 
 Cool
+
+-----
+
+This script is for academic use only. If abuse is reported, this repository will be removed.
+
+To learn more, or to get help, contact [ross](https://github.com/rosshamish/)
+
+
 
 [Firefox]: https://www.mozilla.org/en-US/firefox/new/
 [Chrome]: http://www.google.ca/chrome/
