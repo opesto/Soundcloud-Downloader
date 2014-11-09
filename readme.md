@@ -3,11 +3,11 @@ SoundCloud downloader
 
 Follow these steps exactly:
 
-1. **[Download](http://git-scm.com/download/mac)** and **[install](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac)** git
+1. [Download](http://git-scm.com/download/mac) and [install](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac) git
 
-* [Download python](https://www.python.org/downloads/release/python-342/)
+2. [Download python](https://www.python.org/downloads/release/python-342/)
 
-* Open Terminal
+3. Open Terminal
     * How-to: Open Finder. Click on `Applications`, then `Utilities`. 
     * Important: when in the Terminal, type *exactly* what is shown
 
@@ -19,7 +19,7 @@ Follow these steps exactly:
     
             (and comments look like this)
 
-* Verify that python and git were installed correctly.
+4. Verify that python and git were installed correctly.
 
         $ git --version
         git version #.#.#
@@ -33,9 +33,9 @@ Follow these steps exactly:
         (Where # is some number)
         (Do not type the $)
 
-* Open Finder. Pick a folder to keep downloaded songs in, or create a new one. A good option is “/Users/<your-name>/Music/Soundcloud”. Keep Finder open.
+5. Open Finder. Pick a folder to keep downloaded songs in, or create a new one. A good option is “/Users/<your-name>/Music/Soundcloud”. Keep Finder open.
 
-* Open Terminal.
+6. Open Terminal.
 
         $ mkdir python-soundcloud-dl
         $ cd python-soundcloud-dl
@@ -95,13 +95,13 @@ Follow these steps exactly:
 
         (Code will open in a text editor window)
 
-* In the code, replace `<your-name>` on this line with your actual name
+7. In the code, replace `<your-name>` on this line with the name of your computer
 
         destination_folder = '/Users/<your-name>/Music/Soundcloud'
 
         (This should be the same path as in step 5)
 
-* Save the file, and quit TextEdit.
+8. Save the file, and quit TextEdit.
 
 Congratulations! You’re done all the hard one-time-only stuff! 
 
@@ -112,19 +112,16 @@ From now on you'll only need the steps in "Regular workflow".
 Regular workflow:
 
 1. Open a web browser: Safari, [Firefox], or [Chrome]
-    1. Go to soundcloud
-        * How-to: Type `http://soundcloud.com` in the [address bar](http://www.basicsbee.com/lesson3.html)
+    * Go to soundcloud
     * Go to the page of a song or set which you own the rights to
     * Copy the page's address
-        * How-to: click and drag to select the whole address with your mouse. 
-            * Right click on the text, and select "copy" **or** hold 'Cmd' and press 'C'
+        * Right click on the text, and select "copy" **or** hold 'Cmd' and press 'C'
         * It should look like one of:
             * `https://soundcloud.com/<user>/<track-name>`
             * `https://soundcloud.com/<user>/sets/<set-name>`
             * `https://soundcloud.com/<user>/likes `
 
-* Open Terminal.
-    * Refer to setup step #3 if you've forgotten how
+2. Open Terminal (refer to setup step #3 if you've forgotten how)
     * To get the page-address: right click, then click 'paste'
 
             $ cd
@@ -139,8 +136,8 @@ Regular workflow:
             Downloading: <track-name>.mp3
              10.32 Mbps (3.21/3.20MB): 100.00%
 
-* Open Finder.
-    1. Go to your downloading folder. If you follow the instructions exactly, it is `/Users/<your-name>/Music/Soundcloud`
+3. Open Finder.
+    1. Go to your downloading folder. If you have been following exactly, it is `/Users/<your-name>/Music/Soundcloud`
     * The folder you named in the previous step will be there
     * Inside the folder will be each track downloaded
 
@@ -152,7 +149,15 @@ This script is for academic use only. If abuse is reported, this repository will
 
 To learn more, or to get help, contact [ross](https://github.com/rosshamish/)
 
+[Learn more about python]  
+[Learn more about git]  
+[Learn more about github]  
 
+------
 
 [Firefox]: https://www.mozilla.org/en-US/firefox/new/
 [Chrome]: http://www.google.ca/chrome/
+
+[Learn more about python]: http://docs.activestate.com/activepython/2.7/easytut/index.html
+[Learn more about git]: http://cswsolutions.com/featured-post/git-for-non-developers/
+[Learn more about github]: http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1
