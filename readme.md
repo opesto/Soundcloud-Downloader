@@ -4,7 +4,7 @@ Follow these steps exactly.
 
 #### Setup
 
-1. [Download](http://git-scm.com/download/mac) and [install](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac) git
+1. [Install](http://git-scm.com/download/mac) (http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac) git
 
 3. Open Terminal
     * How-to: Open Finder. Click on `Applications`, then `Utilities`. 
