@@ -12,7 +12,7 @@ Follow these steps exactly.
 
             $ like this
 
-        Type it **exactly**, and hit Enter on your keyboard after each line. For each command, expected output is shown
+        Type the "`like this`" part **exactly**, and hit Enter on your keyboard after each line. For each command, expected output is shown
 
             like this
     
