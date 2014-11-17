@@ -8,11 +8,11 @@ Follow these steps exactly.
 
 3. Open Terminal
     * How-to: Open Finder. Click on `Applications`, then `Utilities`. 
-    * Important: when in the Terminal, type *exactly* what is shown
+    * Important: when in the Terminal, type every line which starts with `$`
 
             $ like this
 
-        and hit Enter on your keyboard after each line. For each command, expected output is shown
+        Type it **exactly**, and hit Enter on your keyboard after each line. For each command, expected output is shown
 
             like this
     
