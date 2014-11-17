@@ -6,8 +6,6 @@ Follow these steps exactly.
 
 1. [Download](http://git-scm.com/download/mac) and [install](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Mac) git
 
-2. [Download python](https://www.python.org/downloads/release/python-342/)
-
 3. Open Terminal
     * How-to: Open Finder. Click on `Applications`, then `Utilities`. 
     * Important: when in the Terminal, type *exactly* what is shown
