@@ -1,4 +1,95 @@
-SoundCloud downloader - mac instructions
+# SoundCloud downloader
+
+Installation instructions:  
+[windows](#windows)
+[mac](#mac)
+
+## Windows
+
+Follow these steps exactly.
+
+#### Setup
+
+1. Install python
+    * Go to https://www.python.org/downloads/release/python-278/
+    * Download the `.msi` (Microsoft installer) file labelled `Windows x86 MSI Installer (2.7.8)`
+    * Run the `python-2.7.8.msi` file
+    * A window will pop up to help you through the installation
+    * Keep clicking `Next` - the defaults are all fine.
+
+0. Restart your computer
+    * If you skip this step, other things may fail for no apparent reason. I'd recommend doing this.
+
+0. Install pip
+    * Go to http://www.pip-installer.org/en/latest/installing.html
+    * Where it says `To install or upgrade pip, securely download get-pip.py`, right-click on `get-pip.py` and click "Save Link As".
+    * Save it in `C:\Python27\`
+
+0. Install git
+    * Go to http://git-scm.com/download/win
+    * Download the `.exe` installer file
+    * Run the `.exe` installer file
+    * A window will pop up to help you through the installation
+    * Keep clicking `Next` - the defaults are all fine.
+
+0. Open up a `git bash` command prompt
+    * Hit the windows key on your keyboard **or** click the start button
+    * type `git bash`, and hit Enter
+
+0. Type `cd C:\Python27` and hit Enter
+
+0. Type `python get-pip.py` and hit Enter
+
+0. Type `cd Scripts` and hit Enter
+
+0. Type `pip install mutagen` and hit Enter
+
+0. Type `pip install requests` and hit Enter
+
+0. Type `cd ..` and hit Enter
+
+0. Type `git clone https://github.com/rosshamish/soundcloud-downloader` and hit Enter
+
+0. Type `cd soundcloud-downloader` and hit Enter
+
+0. Make a new folder on your desktop called `Soundcloud-Downloads`. Find its exact "path" by right-clicking on it and selecting `Properties`. Keep this path around, you'll need it in the next step. It should look something like "C:\Users\<yourname>\Desktop\Soundcloud-Downloads"
+
+0. Open a file explorer
+    
+    Click `Computer` in the left sidebar.
+
+    Click `C:`
+
+    Click `Python27`
+
+    Click `soundcloud-downloader`
+
+    Edit the python code file `soundcloud-downloader.py` by right-clicking and selecting `Edit`
+
+    In the code, replace this line `destination_folder = '/Users/<your-name>/Music/Soundcloud'`
+
+    With this line `destination_folder = r'C:\Users\<yourname>\Desktop\Soundcloud-Downloads'`
+
+    (This should be the same path as in the previous step)
+
+Congrats! You're done all the hard stuff.
+
+#### Regular workflow
+
+1. Open a `git bash` command prompt
+    * Hit the windows key on your keyboard **or** click the start menu
+    * Type `git bash`
+    * Hit Enter
+
+0. In git bash, type `cd C:\Python27\soundcloud-downloader`, and hit Enter
+
+0. In git bash, type `python soundcloud-downloader.py <URL-of-a-song>`, and hit Enter
+
+0. The downloaded song should be in `C:\Users\<yourname>\Desktop\Soundcloud-Downloads`
+
+Cool.
+
+## Mac
 
 Follow these steps exactly.
 
