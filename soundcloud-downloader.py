@@ -9,11 +9,11 @@ import time
 import os.path
 import math
 import os
-
 from mutagen.easyid3 import EasyID3
+from pydub import AudioSegment
 
 while True:
-   DIRECTORY = raw_input("Where do you want to put the files?\ndefault is '/media/Data/Music/Untagged': ") or '/media/Data/Music/Untagged'
+   DIRECTORY = "/Users/Olivier/Music/Soundcloud"
    if os.path.exists(DIRECTORY):
       break;
    else:
@@ -96,12 +96,15 @@ class SoundCloudDownload:
                      filename=os.path.join(DIRECTORY, filename), 
                      reporthook=self.report)
                   self.addID3(title, artist, os.path.join(DIRECTORY, filename))
+                  sound = AudioSegment.from_mp3(os.path.join(DIRECTORY, filename))
+                  sound.export(os.path.join(DIRECTORY, filename), format="wav")
                   # reset download progress to report multiple track download progress correctly
-		  self.download_progress = 0
+                  self.download_progress = 0
                else:
                   print "File Exists"
             except:
                print "\nERROR: Author has not set song to streamable, so it cannot be downloaded"
+   
    
    def report(self, block_no, block_size, file_size):
       self.download_progress += block_size
@@ -140,3 +143,4 @@ if __name__ == "__main__":
    tags = bool(args.id3tags)
    download = SoundCloudDownload(args.SOUND_URL, verbose, tags)
    download.downloadSongs()
+   
